@@ -1,0 +1,24 @@
+{
+  "items": [
+    {
+      "id": "logo-visa",
+      "title": "Visa"
+    },
+    {
+      "id": "logo-mastercard",
+      "title": "Mastercard"
+    },
+    {
+      "id": "logo-maestro",
+      "title": "Maestro"
+    },
+    {
+      "id": "logo-mir",
+      "title": "Mir"
+    },
+    {
+      "id": "logo-union-pay",
+      "title": "Union pay"
+    }
+  ]
+}

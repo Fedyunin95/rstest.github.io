@@ -1,0 +1,88 @@
+{
+  "items": [
+    {
+      "labels": [
+        {
+          "name": "sale",
+          "text": "Sale"
+        },
+        {
+          "name": "hit",
+          "text": "Hit"
+        },
+        {
+          "name": "new",
+          "text": "New"
+        }
+      ],
+      "cover": {
+        "src": "images/samples/product-cover-360x360-2.jpg",
+        "alt": "Apple iPhone XS Max 512 ГБ «серый космос»"
+      },
+      "thumbnails": [],
+      "brand": "KREAFUNK",
+      "title": "Аккумулятор внешний To Charge / Черный",
+      "price": "258 000 ₽",
+      "priceOld": "258 000 ₽",
+      "cartLink": "product-cart.json",
+      "favoriteLink": "product-favorite.json",
+      "isAvailable": true
+    },
+    {
+      "labels": [
+        {
+          "name": "sale",
+          "text": "Sale"
+        },
+        {
+          "name": "hit",
+          "text": "Hit"
+        },
+        {
+          "name": "new",
+          "text": "New"
+        }
+      ],
+      "cover": {
+        "src": "images/samples/product-cover-360x360-3.jpg",
+        "alt": "Apple iPhone XS Max 512 ГБ «серый космос»"
+      },
+      "thumbnails": [],
+      "brand": "XD Design Bobby",
+      "title": "Набор подарочный для виски с деревянным подносом Elite Whiskey",
+      "price": "258 000 ₽",
+      "priceOld": "258 000 ₽",
+      "cartLink": "product-cart.json",
+      "favoriteLink": "product-favorite.json",
+      "isAvailable": true
+    },
+    {
+      "labels": [
+        {
+          "name": "sale",
+          "text": "Sale"
+        },
+        {
+          "name": "hit",
+          "text": "Hit"
+        },
+        {
+          "name": "new",
+          "text": "New"
+        }
+      ],
+      "cover": {
+        "src": "images/samples/product-cover-360x360-4.jpg",
+        "alt": "Apple iPhone XS Max 512 ГБ «серый космос»"
+      },
+      "thumbnails": [],
+      "brand": "Blno",
+      "title": "Набор аксессуаров подарочный Place / Liverpool",
+      "price": "258 000 ₽",
+      "priceOld": "258 000 ₽",
+      "cartLink": "product-cart.json",
+      "favoriteLink": "product-favorite.json",
+      "isAvailable": true
+    }
+  ]
+}

@@ -1,0 +1,337 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v4.0 | 20180602
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+main, menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, main, menu, nav, section {
+    display: block; }
+
+/* HTML5 hidden-attribute fix for newer browsers */
+*[hidden] {
+    display: none; }
+
+body {
+    line-height: 1; }
+
+ol, ul {
+    list-style: none; }
+
+blockquote, q {
+    quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none; }
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0; }
+
+.swiper-container {
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    overflow: hidden;
+    list-style: none;
+    padding: 0;
+    /* Fix of Webkit flickering */
+    z-index: 1; }
+
+.swiper-container-no-flexbox .swiper-slide {
+    float: left; }
+
+.swiper-container-vertical > .swiper-wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+
+.swiper-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-transition-property: -webkit-transform;
+    transition-property: -webkit-transform;
+    -o-transition-property: transform;
+    transition-property: transform;
+    transition-property: transform, -webkit-transform;
+    -webkit-box-sizing: content-box;
+            box-sizing: content-box; }
+
+.swiper-container-android .swiper-slide,
+.swiper-wrapper {
+    -webkit-transform: translate3d(0px, 0, 0);
+            transform: translate3d(0px, 0, 0); }
+
+.swiper-container-multirow > .swiper-wrapper {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; }
+
+.swiper-container-free-mode > .swiper-wrapper {
+    -webkit-transition-timing-function: ease-out;
+         -o-transition-timing-function: ease-out;
+            transition-timing-function: ease-out;
+    margin: 0 auto; }
+
+.swiper-slide {
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    -webkit-transition-property: -webkit-transform;
+    transition-property: -webkit-transform;
+    -o-transition-property: transform;
+    transition-property: transform;
+    transition-property: transform, -webkit-transform; }
+
+.swiper-slide-invisible-blank {
+    visibility: hidden; }
+
+/* Auto Height */
+.swiper-container-autoheight, .swiper-container-autoheight .swiper-slide {
+    height: auto; }
+
+.swiper-container-autoheight .swiper-wrapper {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-transition-property: height, -webkit-transform;
+    transition-property: height, -webkit-transform;
+    -o-transition-property: transform, height;
+    transition-property: transform, height;
+    transition-property: transform, height, -webkit-transform; }
+
+/* 3D Effects */
+.swiper-container-3d {
+    -webkit-perspective: 1200px;
+            perspective: 1200px; }
+    .swiper-container-3d .swiper-wrapper, .swiper-container-3d .swiper-slide, .swiper-container-3d .swiper-slide-shadow-left, .swiper-container-3d .swiper-slide-shadow-right, .swiper-container-3d .swiper-slide-shadow-top, .swiper-container-3d .swiper-slide-shadow-bottom, .swiper-container-3d .swiper-cube-shadow {
+        -webkit-transform-style: preserve-3d;
+                transform-style: preserve-3d; }
+    .swiper-container-3d .swiper-slide-shadow-left, .swiper-container-3d .swiper-slide-shadow-right, .swiper-container-3d .swiper-slide-shadow-top, .swiper-container-3d .swiper-slide-shadow-bottom {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        z-index: 10; }
+    .swiper-container-3d .swiper-slide-shadow-left {
+        background-image: -webkit-gradient(linear, right top, left top, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0)));
+        background-image: -o-linear-gradient(right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+        background-image: linear-gradient(to left, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)); }
+    .swiper-container-3d .swiper-slide-shadow-right {
+        background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0)));
+        background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+        background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)); }
+    .swiper-container-3d .swiper-slide-shadow-top {
+        background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0)));
+        background-image: -o-linear-gradient(bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+        background-image: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)); }
+    .swiper-container-3d .swiper-slide-shadow-bottom {
+        background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0)));
+        background-image: -o-linear-gradient(top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+        background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)); }
+
+/* IE10 Windows Phone 8 Fixes */
+.swiper-container-wp8-horizontal, .swiper-container-wp8-horizontal > .swiper-wrapper {
+    -ms-touch-action: pan-y;
+        touch-action: pan-y; }
+
+.swiper-container-wp8-vertical, .swiper-container-wp8-vertical > .swiper-wrapper {
+    -ms-touch-action: pan-x;
+        touch-action: pan-x; }
+
+/*==========================================================================
+    Custom fonts
+==========================================================================*/
+@font-face {
+    font-family: 'CeraRoundPro';
+    src: url("../fonts/CeraRoundPro-Regular.otf");
+    font-weight: normal;
+    font-style: normal; }
+
+@font-face {
+    font-family: 'CeraRoundPro';
+    src: url("../fonts/CeraRoundPro-Bold.otf");
+    font-weight: bold;
+    font-style: normal; }
+
+@font-face {
+    font-family: 'CeraRoundPro';
+    src: url("../fonts/CeraRoundPro-Black.otf");
+    font-weight: 800;
+    font-style: normal; }
+
+@font-face {
+    font-family: 'Roboto';
+    src: url("../fonts/CeraRoundPro-Medium.otf");
+    font-weight: 500;
+    font-style: normal; }
+
+@font-face {
+    font-family: 'Roboto';
+    src: url("../fonts/CeraRoundPro-Light.otf");
+    font-weight: 300;
+    font-style: normal; }
+
+/*==========================================================================
+    HTML, BODY styles
+==========================================================================*/
+html {
+    height: 100%; }
+
+body {
+    background-color: #fff;
+    color: #000;
+    font-family: "CeraRoundPro";
+    height: 100%;
+    line-height: 1.2;
+    min-width: 320px;
+    width: 100%;
+    -webkit-overflow-scrolling: touch; }
+
+* {
+    font-family: "CeraRoundPro"; }
+
+.wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    min-height: 100%;
+    min-width: 320px;
+    position: relative; }
+
+.header,
+.footer {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 auto;
+            flex: 0 0 auto; }
+
+.main {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 auto;
+            flex: 1 0 auto; }
+
+.title {
+    color: #000;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: normal;
+    letter-spacing: -0.03em;
+    line-height: normal; }
+
+.visually-hidden {
+    height: 1px;
+    left: -10000px;
+    overflow: hidden;
+    pointer-events: none;
+    position: absolute;
+    top: auto;
+    width: 1px; }
+
+a:focus,
+button:focus,
+div:focus,
+input:focus,
+textarea:focus {
+    outline: none; }
+
+input, input:hover, input:focus {
+    -moz-appearance: textfield; }
+    input::-webkit-outer-spin-button, input::-webkit-inner-spin-button, input:hover::-webkit-outer-spin-button, input:hover::-webkit-inner-spin-button, input:focus::-webkit-outer-spin-button, input:focus::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0; }
+
+svg {
+    width: 100%;
+    height: 100%; }
+
+.header {
+    width: 100%;
+    position: -webkit-sticky;
+    position: sticky;
+    left: 0;
+    top: 0;
+    padding: 25px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    background-color: #000;
+    color: #fff !important; }
+    .header__wrapper {
+        width: 100%;
+        height: 100%;
+        max-width: 1200px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between; }
+    .header__logo {
+        width: 200px;
+        height: 40px; }
+        .header__logo svg {
+            width: 100%;
+            height: 100%; }
+    .header__menu {
+        font-size: 16px;
+        font-family: "CeraRoundPro";
+        color: #fdfffc;
+        font-weight: bold;
+        line-height: 1.2;
+        text-align: left; }
+        .header__menu__link {
+            color: inherit;
+            text-decoration: none; }
+            .header__menu__link:not(:last-child) {
+                margin-right: 50px; }
+    .header__btn {
+        border: 2px solid rgba(84, 137, 195, 0.4);
+        width: 196px;
+        height: 56px;
+        background-color: transparent;
+        border-radius: 50px;
+        color: #fdfffc;
+        font-size: 16px;
+        font-weight: bold;
+        line-height: 1.2;
+        cursor: pointer; }
+        .header__btn:hover, .header__btn:focus, .header__btn:active {
+            border-color: #5489c3; }
+
+/*# sourceMappingURL=sourcemaps/main.css.map */

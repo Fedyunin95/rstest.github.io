@@ -1,0 +1,63 @@
+include /helpers/mixins
+
+doctype html
+
+html(
+  class="no-js"
+  lang= (lang ? lang : "ru")
+)
+
+  head
+
+    meta(charset="utf-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="keywords", content="Meta keywords")
+    meta(name="description", content="Meta description")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    meta(name="format-detection", content="telephone=no")
+
+    title
+      if pageTitle
+        = pageTitle
+      else
+        | Leto
+
+    - var mainStylesFileName = "main.min";
+
+    if env && env.NODE_ENV == "development"
+        - mainStylesFileName = "main";
+
+    link(rel="stylesheet", href= assetsDir + "styles/" + mainStylesFileName + ".css")
+    //- link(rel="preload" href= assetsDir + "fonts/lato-zachleat-optimized.woff2" as="font" type="font/woff2" crossorigin)
+
+    script
+      | document.documentElement.className = document.documentElement.className.replace(new RegExp('(?:^|\\s)'+ 'no-js' + '(?:\\s|$)'), '');
+
+      include ../../build/assets/scripts/fonts-loading.js
+
+  body
+
+    block variables
+
+    - var mainScriptFileName = "main.min";
+
+    if env && env.NODE_ENV == "development"
+      - mainScriptFileName = "main";
+
+    script(src= assetsDir + "scripts/" + mainScriptFileName + ".js")
+    div.wrapper
+
+      include /components/Header/index
+
+
+      - var mainBlockClass = "main";
+
+      if mainBlockExtraClasses
+        - mainBlockClass = mainBlockClass + " " + mainBlockExtraClasses;
+
+      main(class= mainBlockClass)
+
+        block content
+
+      include /components/Footer/index
+

@@ -1,0 +1,620 @@
+// /*
+//  *  MIXINS (by igrik 18.01.17)
+//  */
+
+
+
+
+@mixin flipH($ie-support: no) {
+    transform: scaleX(-1);
+    @if $ie-support == yes {
+        -ms-filter: "FlipH";
+        filter: FlipH;
+    }
+}
+
+@mixin flipV($ie-support: no) {
+    transform: scaleY(-1);
+    // /*& when (@ie-support = yes) {
+    //     -ms-filter: "FlipH";
+    //     filter: FlipH;
+    // }*/
+}
+
+
+
+
+@mixin vertical-middle-transform {
+    ///* "position" property must be not "static"; */
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+@mixin horizontal-middle-transform {
+    ///* "position" property must be not "static"; */
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+
+
+@mixin rotate-ie8-90deg {
+    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+    -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=3)";
+    background-color: #fff; //  !!!!! for blur fix
+}
+
+
+
+
+@mixin gray-filter {
+    filter: gray; /* IE6-9 */
+    filter: grayscale(1); /* Microsoft Edge and Firefox 35+ */
+    -webkit-filter: grayscale(1); /* Google Chrome, Safari 6+ & Opera 15+ */
+}
+
+
+
+
+@mixin placeholders($firefox-only: false) {
+    @if $firefox-only == false {
+        &::-webkit-input-placeholder {
+            @content;
+        }
+        &:-ms-input-placeholder {
+            @content;
+        }
+    }
+    &:-moz-placeholder {  /* Firefox 18- */
+        @content;
+    }
+    &::-moz-placeholder {  /* Firefox 19+ */
+        @content;
+    }
+}
+
+
+
+
+@mixin prop-rel-font-viewport($windowSize, $propertyValue, $property) {
+    #{property}: 1em * $propertyValue / ($windowSize / 100);
+}
+
+
+
+
+@mixin dl-rows {
+    dt, dd {
+        display: inline;
+    }
+    dd:after {
+        content: '\A';
+        white-space: pre;
+    }
+}
+
+
+
+
+
+@mixin input-hide-abs {
+    position: absolute;
+    left: -9999px;
+    display: block !important;
+    width: 0;
+    height: 0;
+}
+
+@mixin input-hide-fixed {
+    position: fixed;
+    top: 0;
+    left: -9999px;
+    display: block !important;
+    width: 0;
+    height: 0;
+}
+
+
+
+
+
+@mixin selection($background, $color) {
+    *::selection,
+    *::-moz-selection {
+        background: $background;
+        color: $color;
+    }
+}
+
+@mixin remove-gray-highlight-on-tap {
+    -webkit-tap-highlight-color: rgba(0,0,0,0); // Remove Gray Highlight When Tapping Links in Mobile Safari
+    // /* 
+    // And then to allow :active styles to work in your CSS on a page in Mobile Safari:
+    // document.addEventListener("touchstart", function(){}, true);
+    // */
+}
+
+
+
+
+///*  make whole block (also with <a> inside) to be a link */
+@mixin block-linked {
+    background-color: #FFF; /* Fix to make div clickable in IE */
+    opacity: 0; /* Fix to make div clickable in IE */
+    text-decoration: none; /* No underlines on the link */
+}
+
+
+
+
+@mixin text-align-justify($content: null) {
+    ///* ie 7 */
+    // *width: 100%;
+    // *-ms-text-justify: distribute-all-lines;
+    // *text-justify: distribute-all-lines;
+
+    text-align: justify;
+
+    ///*  ie fix  */
+    text-justify: distribute;
+    //   OR
+    // text-justify: distribute-all-lines;
+
+    &:after {
+        @if $content != null {
+            content: '';
+        }
+        display: inline-block;
+        width: 100%;
+        height: 0;
+        font-size: 0;
+        line-height: 0;
+    }
+}
+
+@mixin vertical-ghost-align($content: null) {
+    &:after {
+        @if $content == null {
+            content: '';
+        }
+        // vertical-align: middle;
+        height: 100%;
+        display: inline-block;
+    }
+}
+
+@mixin hide-input-spinners {
+    -moz-appearance: textfield;
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+        ///* display: none; <- Crashes Chrome on hover */
+        -webkit-appearance: none;
+        margin: 0; ///* <-- Apparently some margin are still there even though it's hidden */
+    }
+}
+
+
+
+
+// hiding content for sighted users (content stay available to screen reader users)
+@mixin visually-hidden-content {
+    height: 1px;
+    left: -10000px;
+    overflow: hidden;
+    pointer-events: none; // ?
+    position: absolute;
+    top: auto;
+    width: 1px;
+}
+
+
+
+
+@mixin add-custom-font($family: Arial, $file-name: arial, $weight: normal, $style: normal, $eot: false, $woff2: false, $woff: false, $ttf: false, $otf: false, $svg: false, $svg-id: null, $srcLocal: false) {
+    @font-face {
+        $src: null;
+        @if $eot == true {
+            $src: append($src, url('../fonts/#{$file-name}.eot'), comma); // IE9 Compat Modes
+        }
+        @if $eot == true {
+            $src: append($src, url('../fonts/#{$file-name}.eot?#iefix') format('embedded-opentype'), comma); // IE6-IE8
+        }
+        @if $woff2 == true {
+            $src: append($src, url('../fonts/#{$file-name}.woff2') format('woff2'), comma); // Super Modern Browsers
+        }
+        @if $woff == true {
+            $src: append($src, url('../fonts/#{$file-name}.woff') format('woff'), comma); // Pretty Modern Browsers
+        }
+        @if $ttf == true {
+            $src: append($src, url('../fonts/#{$file-name}.ttf') format('truetype'), comma); // Safari, Android, iOS
+        }
+        @if $otf == true {
+            $src: append($src, url('../fonts/#{$file-name}.otf') format('opentype'), comma);
+        }
+        @if $svg == true {
+            $src: append($src, url('../fonts/#{$file-name}.svg##{$svg-id}') format('svg'), comma); // Legacy iOS
+        }
+        font-family: $family;
+        @if $srcLocal == true {
+            src: local($family);
+        }
+        src: $src;
+        font-weight: $weight;
+        font-style: $style;
+        font-display: swap;
+    }
+
+    @if $svg == yes {
+        //  To get webfonts to render with good antialias in Chrome on Windows, you need to use this format in the font declaration
+        @media screen and (-webkit-min-device-pixel-ratio: 0) {
+            @font-face {
+                font-family: $family;
+                src: url('../fonts/#{$file-name}.svg##{svg-id}') format('svg');
+            }
+        }
+    }
+}
+
+
+
+
+//
+//  Function to create an optimized svg url (Sass version)
+//
+@function svg-url($svg){
+    //
+    //  Add missing namespace
+    //
+    @if not str-index($svg,xmlns) {
+        $svg: str-replace($svg, '<svg','<svg xmlns="http://www.w3.org/2000/svg"');
+    }
+    //    
+    //  Chunk up string in order to avoid 
+    //  "stack level too deep" error
+    //     
+    $encoded:'';
+    $slice: 2000;
+    $index: 0;
+    $loops: ceil(str-length($svg)/$slice);
+    @for $i from 1 through $loops {
+        $chunk: str-slice($svg, $index, $index + $slice - 1); 
+        //
+        //   Encode 
+        //
+        $chunk: str-replace($chunk,'"', '\'');
+        $chunk: str-replace($chunk,'%', '%25');
+        $chunk: str-replace($chunk,'&', '%26');
+        $chunk: str-replace($chunk,'#', '%23');
+        $chunk: str-replace($chunk,'{', '%7B');
+        $chunk: str-replace($chunk,'}', '%7D');
+        $chunk: str-replace($chunk,'<', '%3C');
+        $chunk: str-replace($chunk,'>', '%3E');
+        
+        // 
+        //    The maybe list 
+        //
+        //    Keep size and compile time down
+        //    ... only add on documented fail 
+        // 
+        //  $chunk: str-replace($chunk, '|', '%7C');
+        //  $chunk: str-replace($chunk, '[', '%5B');
+        //  $chunk: str-replace($chunk, ']', '%5D');
+        //  $chunk: str-replace($chunk, '^', '%5E');
+        //  $chunk: str-replace($chunk, '`', '%60');
+        //  $chunk: str-replace($chunk, ';', '%3B');
+        //  $chunk: str-replace($chunk, '?', '%3F');
+        //  $chunk: str-replace($chunk, ':', '%3A');
+        //  $chunk: str-replace($chunk, '@', '%40');
+        //  $chunk: str-replace($chunk, '=', '%3D');      
+
+        $encoded: #{$encoded}#{$chunk};
+        $index: $index + $slice;
+    }
+    @return url("data:image/svg+xml,#{$encoded}");
+}
+
+//  Background svg mixin          
+@mixin generate-svg-background($svg){
+    background-image: svg-url($svg);
+}
+
+//  Helper function to replace characters in a string
+@function str-replace($string, $search, $replace: '') {
+    $index: str-index($string, $search); 
+    // @return if($index, 
+    //     str-slice($string, 1, $index - 1) + $replace + 
+    //     str-replace(str-slice($string, $index + 
+    //     str-length($search)), $search, $replace), 
+    //     $string);
+    @if $index {
+        @return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+    }
+    
+    @return $string;
+}
+
+
+
+
+@mixin clearfix {
+    *zoom: 1;
+
+    &:before,
+    &:after {
+      content: " ";
+      display: table;
+    }
+    &:after {
+      clear: both;
+    }
+}
+
+@mixin clearfix-short($content: true) {
+    &:after {
+        @if $content == true {
+            content: '.';
+        }
+        display: block;
+        visibility: hidden;
+        /*width: 0;*/
+        height: 0;
+        clear: both;
+    }
+}
+
+@mixin clearfix-ib {
+    display: inline-block;
+    width: 100%;
+}
+
+
+
+
+@mixin clear-ib {
+    font-size: 0px;
+    letter-spacing: 0px;
+    word-spacing: 0px;
+}
+
+@mixin cleared-ib($font-size: null) {
+    @if $font-size != null {
+        font-size: $font-size;
+    }
+    letter-spacing: auto;
+    word-spacing: auto;
+}
+
+
+
+
+@mixin clear-button {
+    border: none;
+    padding: 0;
+    overflow: visible; // for IE
+    font: inherit;
+    line-height: normal;
+    background: none;
+    color: inherit;
+    &:focus {
+        outline: 0 !important; // Remove blue border in Chrome
+    }
+    &::-moz-focus-inner {
+        border: none;
+        margin: 0;
+        padding: 0;
+    }
+}
+
+
+@mixin multiline-ellipsis($linesnumber, $lineheight, $parent_name, $ellipsiswidth: '3em') {
+    &.multiline-ellipsis {
+        overflow: hidden;
+        height: $linesnumber * $lineheight;
+        line-height: $lineheight;
+        &:before {
+            content:"";
+            float: left;
+            width: 5px;
+            height: $linesnumber * $lineheight;
+        }
+        &:after {
+            content: "\02026";
+            position: relative;
+            top: -$lineheight;
+            left: 100%;
+            float: right;
+            // .box-sizing(content-box);
+            margin-left: -$ellipsiswidth;
+            padding-right: 5px;
+            width: $ellipsiswidth;
+            text-align: right;
+            background: white;
+            background: linear-gradient(to right, rgba(255, 255, 255, 0), white 50%, white);
+        }
+    }
+    .multiline-ellipsis__content {
+        float: right;
+        width: 100%;
+        margin-left: -5px;
+    }
+
+    @supports (-webkit-line-clamp: 1) {
+        .multiline-ellipsis:before,
+        .multiline-ellipsis:after {
+            display: none;
+        }
+        #{parent_name} .multiline-ellipsis__content {
+            display: -webkit-box;
+            -webkit-line-clamp: $linesnumber;
+            -webkit-box-orient: vertical;
+            float: none;
+            margin-left: 0;
+            width: auto;
+            max-height: 3.6em; /* needed this to get it to work */
+            height: auto;
+        }
+    }
+}
+
+
+
+
+// @mixin responsive-font($max-screen-size, $current-screen-size, $min-screen-size: 1, $base-parameter: width, $step: 20, $zero-min-screen: yes, $measure: 1em, $ratio: 0, $round: noround) {
+//     .generate-font-sizes() {
+//         @if $base-parameter == width) {
+//             .loop($max-screen-size, $base-screen-size: 0) when ($max-screen-size >= $base-screen-size + $min-screen-size) {
+//                 .loop(($max-screen-size - @step));
+//                 @media (min-width: ~"#{max-screen-size}px") {
+//                     @if $round == noround) {
+//                         font-size: $font-size;
+//                     }
+//                     @if $round >= 0) {
+//                         font-size: round($font-size, $round);
+//                     }
+//                 }
+//             }
+//             @if $zero-min-screen == yes) {
+//                 @media (min-width: 0px) {
+//                     @if $round == noround) {
+//                         font-size: $font-size-min;
+//                     }
+//                     @if $round >= 0) {
+//                         font-size: round($font-size-min, $round);
+//                     }
+//                 }
+//             }
+//             .loop($max-screen-size: $max-screen-size);
+//         }
+//         @if $base-parameter == height) {
+//             .loop($max-screen-size, $base-screen-size: 0) when ($max-screen-size >= $base-screen-size + $min-screen-size) {
+//                 .loop(($max-screen-size - $step));
+//                 @media (min-height: ~"#{max-screen-size}px") {
+//                     & when (@round = noround) {
+//                         font-size: @font-size;
+//                     }
+//                     & when (@round >= 0) {
+//                         font-size: round(@font-size, @round);
+//                     }
+//                 }
+//             }
+//             & when (@zero-min-screen = yes) {
+//                 @media (min-height: 0px) {
+//                     & when (@round = noround) {
+//                         font-size: @font-size-min;
+//                     }
+//                     & when (@round >= 0) {
+//                         font-size: round(@font-size-min, @round);
+//                     }
+//                 }
+//             }
+//             .loop(@max-screen-size: @max-screen-size);
+//         }
+//     }
+//     @if $ratio == 0) {
+//         $font-size: ($max-screen-size / $current-screen-size) * $measure;
+//         $font-size-min: ($min-screen-size / $current-screen-size) * $measure;
+//         .generate-font-sizes();
+//     }
+//     @if $ratio > 0) {
+//         $screen-changed-ratio: $max-screen-size / $current-screen-size;
+//         // $diff-ratio: $screen-changed-ratio / $ratio;
+//         // $diff-ratio: 3;
+//         $diff-measure: $ratio / (1200 - $current-screen-size);
+//         $font-size: (1+ (($max-screen-size - $current-screen-size) * $diff-measure)) * $measure;
+//         $font-size-min: (($min-screen-size - 1) / $current-screen-size) * $measure;
+//         .generate-font-sizes();
+//     }
+// }
+
+
+
+
+//  Chrome jagged edges (ecs. after transform) ...SEE next .prevent-flicker()
+// /* DEPRECATED
+// .chrome-aliase() {
+//     backface-visibility: hidden;
+// 
+//     // other solution
+//     transform-style: preserve-3d;
+// }
+// */
+
+
+//  -WebKit-  prevent flicker while animation, transform, transition (ecs. jagged edges)
+@mixin prevent-flicker {
+    // first solution:
+    -webkit-transform: translateZ(0);
+    -webkit-font-smoothing: antialiased;
+    backface-visibility: hidden; ///* if use "transform"  */
+    // .transform-style(preserve-3d); /* OPTIONAL */
+    // -webkit-perspective: 1000; /* OPTIONAL */
+    // second solution:
+    // outline: 1px solid transparent;/* if use "transition"  */
+    // third solution:
+    // .transform-style(preserve-3d);
+    // forth solution:
+    // -webkit-transform: rotateZ(2deg);
+    // fifth solution:
+    // .transform(translate3d( 0, 0, 0));
+    // six solution:
+    // .transform(translateZ(0));
+}
+
+
+// @mixin prevent-flicker {}
+@mixin text-antialiase($color: #000, $size: .037em) {
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke: $size $color;
+    // -webkit-font-smoothing: subpixel-antialiased;
+    // text-shadow: 0 0 0;
+}
+
+
+
+
+//   GOOGLE maps  -  hide all text (copyright) and blue icon
+@mixin hide-google-info {
+    a[href^="http://maps.google.com/maps"]{ display: none !important }
+    a[href^="https://maps.google.com/maps"]{ display: none !important }
+    img[src="http://maps.gstatic.com/mapfiles/api-3/images/google_white2.png"] {
+        display: none !important;
+    }
+
+    .gm-style-cc {
+        display: none !important; // text of "terms" and "copyright" in right bottom corner
+    }
+
+    .gm-svpc {
+        display: none !important; // yellow man icon in right bottom conner
+    }
+
+    .gm-style > div:not(.gmnoprint):not(:first-child) {
+        display: none !important; // hide ALL ui elements EXCEPT controls
+    }
+
+    //   OLD VERSION (need to check!)
+    /* .gmnoprint a, .gmnoprint span, .gm-style-cc {
+        display: none !important;
+    }
+    .gmnoprint div {
+        background: none !important;
+    }
+    .gmnoprint {
+        display: none !important; // ??? maybe not need
+    } */
+}
+
+
+
+@function sqrt($r) {
+    $x0: 1;
+    $x1: $x0;
+
+    @for $i from 1 through 10 {
+        $x1: $x0 - ($x0 * $x0 - abs($r)) / (2 * $x0);
+        $x0: $x1;
+    }
+
+    @return $x1;
+}

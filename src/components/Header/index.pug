@@ -1,0 +1,28 @@
+header.header
+   .header__wrapper
+       div.header__logo
+           svg
+               use(xlink:href=assetsDir + "images/sprite.symbol.svg#logo")
+       nav.header__menu
+           -
+               var links = [
+                   {
+                       link: '/',
+                       text: ' О сервисе'
+                   },
+                   {
+                       link: '/',
+                       text: 'Функции'
+                   },
+                   {
+                       link: '/',
+                       text: 'Возможности'
+                   },
+                   {
+                       link: '/',
+                       text: 'Партнеры'
+                   }
+               ]
+           each link in links
+               a.header__menu__link(href= link.link)= link.text
+       button.header__btn.js-header-button  Оставить заявку

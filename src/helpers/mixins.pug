@@ -1,0 +1,8 @@
+- 
+    var getFormattedLink = function(link) {
+        if (environment == "development") {
+            return link.replace(".html", "");
+        } else {
+            return link;
+        }
+    };

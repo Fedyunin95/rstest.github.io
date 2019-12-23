@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html class="no-js" lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="keywords" content="Meta keywords">
+    <meta name="description" content="Meta description">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <title>Leto
+    </title>
+    <link rel="stylesheet" href="assets/styles/main.min.css">
+    <script>
+      document.documentElement.className = document.documentElement.className.replace(new RegExp('(?:^|\\s)'+ 'no-js' + '(?:\\s|$)'), '');(function() {
+    "use strict";
+    // Optimization for Repeat Views
+    if( sessionStorage.fontsLoadedCriticalFoftPreloadFallback ) {
+        document.documentElement.className += " fonts-loaded-2";
+        return;
+    } else if( "fonts" in document ) {
+        document.fonts.load("1em BodoniSubset").then(function () {
+            document.documentElement.className += " fonts-loaded-1";
+            Promise.all([
+                document.fonts.load("400 1em Bodoni"),
+                document.fonts.load("500 1em Bodoni"),
+                // document.fonts.load("600 1em Bodoni"),
+                document.fonts.load("700 1em Bodoni"),
+                // document.fonts.load("900 1em Bodoni"),
+                document.fonts.load("italic 500 1em Bodoni")
+            ]).then(function () {
+                document.documentElement.className += " fonts-loaded-2";
+                // Optimization for Repeat Views
+                sessionStorage.fontsLoadedCriticalFoftPreloadFallback = true;
+            });
+        });
+    } else {
+        // use fallback
+        var ref = document.getElementsByTagName("script")[0];
+        var script = document.createElement("script");
+        script.src = "./scripts/critical-foft-preload-fallback-optional.js";
+        script.async = true;
+        ref.parentNode.insertBefore( script, ref );
+        /*
+         * technically you could trigger the web font load here too and race it with
+         * the polyfill load, this means creating an element with text content that
+         * uses the font and attaching it to the document
+         * <div style="font-family: Montserrat; font-weight: 400; font-style: italic">A</div>
+         */
+    }
+})();
+    </script>
+  </head>
+  <body>
+    <script src="assets/scripts/main.min.js"></script>
+    <div class="wrapper">
+      <header class="header js-header  header_black">
+        <div class="header__menu-btn js-header-open">
+          <button class="menu__btn_open"><span></span></button><span class="tirle">Меню</span>
+        </div>
+        <div class="header__menu js-header-menu">
+          <div class="header__menu__wrapper">
+            <button class="header__menu__btn_close js-header-close"><span class="text">Закрыть</span><span class="icon"><span class="first"></span><span class="last"></span></span></button>
+            <ul class="list">
+              <li class="list__item js-list-item"><a class="list__item__link" href="menu.html">Меню</a></li>
+              <li class="list__item js-list-item"><a class="list__item__link" href="about.html">О нас</a></li>
+              <li class="list__item js-list-item"><a class="list__item__link" href="events.html">Мероприятия</a></li>
+              <li class="list__item js-list-item"><a class="list__item__link" href="review.html">Отзывы</a></li>
+              <li class="list__item js-list-item"><a class="list__item__link" href="contacts.html">Контакты</a></li>
+            </ul><a class="button header__btn" href="/">Забронировать</a>
+            <div class="header__contacts">
+              <div class="contact"><span class="title">Адрес</span><span class="info">г.Черняховск, ул. Калининградская, 5, ТЦ &quot;Радуга&quot;</span>
+              </div>
+              <div class="contact"><span class="title">Время работы</span><span class="info">Пн-Вс</span><span class="info">11:00 - 23:00</span>
+              </div>
+              <div class="contact"><span class="title">Телефон</span><span class="info">+7 909 782 8450</span><span class="info">+7 909 782 8450</span>
+              </div>
+            </div>
+          </div>
+          <div class="header__menu__images">
+            <div class="image-slide js-list-item-bg" style="background-image: url(images/headerBG1.png)"><img src="images/headerBG1.png" hidden></div>
+            <div class="image-slide js-list-item-bg" style="background-image: url(images/headerBG2.png)"><img src="images/headerBG2.png" hidden></div>
+            <div class="image-slide js-list-item-bg" style="background-image: url(images/headerBG1.png)"><img src="images/headerBG1.png" hidden></div>
+            <div class="image-slide js-list-item-bg" style="background-image: url(images/headerBG2.png)"><img src="images/headerBG2.png" hidden></div>
+            <div class="image-slide js-list-item-bg" style="background-image: url(images/headerBG1.png)"><img src="images/headerBG1.png" hidden></div>
+          </div>
+        </div><a class="header__logo logo" href="main.html">
+          <div class="header__logo__icon logo__icon"></div>
+          <p class="header__logo__text logo__text">Leto</p></a>
+      </header>
+      <main class="main">
+        <div class="page-main js-main-page">
+          <div class="banner">
+            <div class="banner__swiper_left js-banner-swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="swiper-slide__image" style="background-image: url('assets/images/bannerIMG1.png')"><img src="assets/images/bannerIMG1.png" hidden></div>
+                  <h4 class="swiper-slide__text">Стейк из семги с гарниром на Ваш выбор</h4>
+                </div>
+                <div class="swiper-slide">
+                  <div class="swiper-slide__image" style="background-image: url('assets/images/bannerIMG2.png')"><img src="assets/images/bannerIMG2.png" hidden></div>
+                  <h4 class="swiper-slide__text">Стейк из семги с гарниром на Ваш выбор</h4>
+                </div>
+                <div class="swiper-slide">
+                  <div class="swiper-slide__image" style="background-image: url('assets/images/bannerIMG3.png')"><img src="assets/images/bannerIMG3.png" hidden></div>
+                  <h4 class="swiper-slide__text">Стейк из семги с гарниром на Ваш выбор</h4>
+                </div>
+                <div class="swiper-slide">
+                  <div class="swiper-slide__image" style="background-image: url('assets/images/bannerIMG4.png')"><img src="assets/images/bannerIMG4.png" hidden></div>
+                  <h4 class="swiper-slide__text">Стейк из семги с гарниром на Ваш выбор</h4>
+                </div>
+              </div>
+              <div class="swiper__controler">
+                <div class="swiper-button-next js-next-slide">
+                  <svg>
+                    <use xlink:href="assets/images/sprite.symbol.svg#arrow"></use>
+                  </svg>
+                </div>
+                <div class="swiper-button-prev js-prev-slide">
+                  <svg>
+                    <use xlink:href="assets/images/sprite.symbol.svg#arrow"></use>
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div class="banner__swiper_right js-banner-swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="swiper-slide__image" style="background-image: url('assets/images/bannerIMG1.png')"><img src="assets/images/bannerIMG1.png" hidden></div>
+                  <h4 class="swiper-slide__text"><span>Стейк из семги с гарниром на Ваш выбор</span></h4>
+                  <button class="swiper-slide__reserve-btn">Забронировать</button>
+                </div>
+                <div class="swiper-slide">
+                  <div class="swiper-slide__image" style="background-image: url('assets/images/bannerIMG2.png')"><img src="assets/images/bannerIMG2.png" hidden></div>
+                  <h4 class="swiper-slide__text"><span>Стейк из семги с гарниром на Ваш выбор</span></h4>
+                  <button class="swiper-slide__reserve-btn">Забронировать</button>
+                </div>
+                <div class="swiper-slide">
+                  <div class="swiper-slide__image" style="background-image: url('assets/images/bannerIMG3.png')"><img src="assets/images/bannerIMG3.png" hidden></div>
+                  <h4 class="swiper-slide__text"><span>Стейк из семги с гарниром на Ваш выбор</span></h4>
+                  <button class="swiper-slide__reserve-btn">Забронировать</button>
+                </div>
+                <div class="swiper-slide">
+                  <div class="swiper-slide__image" style="background-image: url('assets/images/bannerIMG4.png')"><img src="assets/images/bannerIMG4.png" hidden></div>
+                  <h4 class="swiper-slide__text"><span>Стейк из семги с гарниром на Ваш выбор</span></h4>
+                  <button class="swiper-slide__reserve-btn">Забронировать</button>
+                </div>
+              </div>
+              <div class="swiper__controler">
+                <div class="swiper-button-next js-next-slide">
+                  <svg>
+                    <use xlink:href="assets/images/sprite.symbol.svg#arrow"></use>
+                  </svg>
+                </div>
+                <div class="swiper-button-prev js-prev-slide">
+                  <svg>
+                    <use xlink:href="assets/images/sprite.symbol.svg#arrow"></use>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="page-main__menu">
+            <div class="menu">
+              <p class="menu__vertical">меню</p>
+              <div class="main__info menu__info">
+                <div class="main__info__title menu__info__title"><span class="main__info__title-background menu__info__title-background">Меню</span><span class="main__info__title-text menu__info__title-text">Меню</span></div>
+                <div class="main__info__subtitle menu__info__subtitle">Это меню создано специально для вас</div>
+                <div class="main__info__description menu__info__description">
+                  <p>В нашем меню блюда европейской кухни, бизнес-ланчи, оригинальные десерты, выпечка, кофе и большой выбор различных видов чая.</p>
+                </div>
+                <ul class="main__info__links menu__info__links">
+                  <li class="main__info__links-item"><a href="/">Завтраки</a></li>
+                  <li class="main__info__links-item"><a href="/">Деловые обеды</a></li>
+                  <li class="main__info__links-item"><a href="/">Основные блюда</a></li>
+                  <li class="main__info__links-item"><a href="/">Десерты</a></li>
+                  <li class="main__info__links-item"><a href="/">Напитки</a></li>
+                </ul>
+              </div>
+              <div class="menu__images js-horizontal-swiper">
+                <div class="swiper-wrapper">
+                  <div class="menu__images-item swiper-slide" style="background-image: url('assets/images/mainMenuIMG1.png')">
+                    <p class="menu__images-text"><span>Стейк из молочной телятины с соусом из молодого шпината</span></p>
+                  </div>
+                  <div class="menu__images-item swiper-slide" style="background-image: url('assets/images/mainMenuIMG2.png')">
+                    <p class="menu__images-text"><span>Стейк из молочной телятины с соусом из молодого шпината</span></p>
+                  </div>
+                  <div class="menu__images-item swiper-slide" style="background-image: url('assets/images/mainMenuIMG3.png')">
+                    <p class="menu__images-text"><span>Стейк из молочной телятины с соусом из молодого шпината</span></p>
+                  </div>
+                  <div class="menu__images-item swiper-slide" style="background-image: url('assets/images/mainMenuIMG4.png')">
+                    <p class="menu__images-text"><span>Стейк из молочной телятины с соусом из молодого шпината</span></p>
+                  </div>
+                  <div class="menu__images-item swiper-slide" style="background-image: url('assets/images/mainMenuIMG1.png')">
+                    <p class="menu__images-text"><span>Стейк из молочной телятины с соусом из молодого шпината</span></p>
+                  </div>
+                  <div class="menu__images-item swiper-slide" style="background-image: url('assets/images/mainMenuIMG2.png')">
+                    <p class="menu__images-text"><span>Стейк из молочной телятины с соусом из молодого шпината</span></p>
+                  </div>
+                  <div class="menu__images-item swiper-slide" style="background-image: url('assets/images/mainMenuIMG3.png')">
+                    <p class="menu__images-text"><span>Стейк из молочной телятины с соусом из молодого шпината</span></p>
+                  </div>
+                  <div class="menu__images-item swiper-slide" style="background-image: url('assets/images/mainMenuIMG4.png')">
+                    <p class="menu__images-text"><span>Стейк из молочной телятины с соусом из молодого шпината</span></p>
+                  </div>
+                </div>
+                <div class="menu__images__controls">
+                  <div class="menu__images__prev-btn js-prev-slide">
+                    <svg>
+                      <use xlink:href="assets/images/sprite.symbol.svg#arrow"></use>
+                    </svg>
+                  </div>
+                  <div class="menu__images__next-btn js-next-slide">
+                    <svg>
+                      <use xlink:href="assets/images/sprite.symbol.svg#arrow"></use>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="page-main__events">
+            <div class="events">
+              <div class="events__body">
+                <div class="events__slider js-singl-swiper_horizontal">
+                  <div class="events__header">
+                    <h4 class="events__header__title">2019</h4>
+                    <div class="events__dots">
+                      <div class="dot">
+                        <h5 class="dot__title">Апрель</h5><span class="dot__circle"></span>
+                      </div>
+                      <div class="dot">
+                        <h5 class="dot__title">Мая</h5><span class="dot__circle"></span>
+                      </div>
+                      <div class="dot">
+                        <h5 class="dot__title">Июнь</h5><span class="dot__circle"></span>
+                      </div>
+                    </div>
+                    <div class="events__more">
+                      <svg>
+                        <use xlink:href="assets/images/sprite.symbol.svg#arrow_long"></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide events__slider__slide" style="background-image: url('assets/images/eventsIMG1.png')"><span class="events__slider__slide-text">&quot;Игра Головой&quot; 22.10</span><img src="assets/images/eventsIMG1.png" hidden></div>
+                    <div class="swiper-slide events__slider__slide" style="background-image: url('assets/images/eventsIMG1.png')"><span class="events__slider__slide-text">&quot;Игра Головой&quot; 22.10</span><img src="assets/images/eventsIMG1.png" hidden></div>
+                    <div class="swiper-slide events__slider__slide" style="background-image: url('assets/images/eventsIMG1.png')"><span class="events__slider__slide-text">&quot;Игра Головой&quot; 22.10</span><img src="assets/images/eventsIMG1.png" hidden></div>
+                    <div class="swiper-slide events__slider__slide" style="background-image: url('assets/images/eventsIMG1.png')"><span class="events__slider__slide-text">&quot;Игра Головой&quot; 22.10</span><img src="assets/images/eventsIMG1.png" hidden></div>
+                  </div>
+                  <div class="events__slider__control">
+                    <div class="events__slider__prev js-prev-slide">
+                      <svg>
+                        <use xlink:href="assets/images/sprite.symbol.svg#arrow"></use>
+                      </svg>
+                    </div>
+                    <div class="events__slider__next js-next-slide">
+                      <svg>
+                        <use xlink:href="assets/images/sprite.symbol.svg#arrow"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div class="main__info events__info">
+                  <div class="main__info__title events__info__title"><span class="main__info__title-background events__info__title-background">Мероприятия</span><span class="main__info__title-text events__info__title-text">Мероприятия</span></div>
+                  <div class="main__info__subtitle events__info__subtitle">Мы предлагаем Вам провести у нас время всей семьей</div>
+                  <div class="main__info__description events__info__description">
+                    <p>В нашем меню блюда европейской кухни, бизнес-ланчи, оригинальные десерты, выпечка, кофе и большой выбор различных видов чая. Также вы можете заказать у нас торт или приобрести подарочные сертификаты.</p>
+                  </div><a class="main__info__link events__info__link" href="/">Подробнее</a>
+                </div>
+                <p class="events__vertical">Мероприятия</p>
+              </div>
+            </div>
+          </div>
+          <div class="reserve page-main__reserve">
+            <h3 class="reserve__title page-main__reserve__title">Лучше один раз попробовать, чем много раз говорить.</h3>
+            <button class="button reserve__btn page-main__reserve__btn"><span class="text">Забронировать</span></button>
+          </div>
+          <div class="page-main__about">
+            <div class="about">
+              <div class="about__header">
+                <h3 class="about__header__title">О нас</h3>
+                <p class="about__subtitle">В нашем меню блюда европейской кухни, бизнес-ланчи, оригинальные десерты, выпечка, кофе и большой выбор различных видов чая.</p>
+              </div>
+              <div class="about__body">
+                <div class="about__img" style="background-image: url('assets/images/aboutIMG.png')"><img src="assets/images/aboutIMG.png" hidden></div>
+                <div class="main__info about__info">
+                  <div class="main__info__title about__info__title"><span class="main__info__title-background about__info__title-background">О нас</span><span class="main__info__title-text about__info__title-text">О нас</span></div>
+                  <div class="main__info__subtitle about__info__subtitle"></div>
+                  <div class="main__info__description about__info__description">
+                    <p>В нашем меню блюда европейской кухни, бизнес-ланчи, оригинальные десерты, выпечка, кофе и большой выбор различных видов чая. Также вы можете заказать у нас торт или приобрести подарочные сертификаты.</p>
+                    <p>В нашем меню блюда европейской кухни, бизнес-ланчи, оригинальные десерты, выпечка, кофе и большой выбор различных видов чая.</p>
+                  </div><a class="main__info__link about__info__link" href="/">Подробнее</a>
+                </div>
+                <p class="about__vertical">О нас</p>
+              </div>
+            </div>
+          </div>
+          <div class="page-main__team">
+            <div class="team">
+              <h3 class="main__title team__title"><span class="main__info__title-background team__title-background">Команда</span><span class="main__info__title-text team__title-text">Наша команда</span></h3>
+              <div class="main__info__subtitle team__subtitle">Мы готовим специально для Вас</div>
+              <div class="team__slider js-team-swiper">
+                <div class="team__swiper swiper-wrapper">
+                  <div class="team__employee swiper-slide">
+                    <div class="team__slide__info">
+                      <p class="team__employee__name"><span class="name">Иван Иванов.</span><span class="position">Шеф повар</span></p>
+                      <p class="team__employee__description">В нашем меню блюда европейской кухни, бизнес-ланчи, оригинальные десерты, выпечка, кофе и большой выбор выпечки</p>
+                    </div>
+                    <div class="team__employee__photo" style="background-image: url('assets/images/team.png')"><img src="assets/images/team.png" hidden>
+                      <div class="background-circle" style="background-color:#c9e7ff"></div>
+                    </div>
+                  </div>
+                  <div class="team__employee swiper-slide">
+                    <div class="team__slide__info">
+                      <p class="team__employee__name"><span class="name">Иван Иванов.</span><span class="position">Cу-Шеф</span></p>
+                      <p class="team__employee__description">В нашем меню блюда европейской кухни, бизнес-ланчи, оригинальные десерты, выпечка, кофе и большой выбор выпечки</p>
+                    </div>
+                    <div class="team__employee__photo" style="background-image: url('assets/images/team.png')"><img src="assets/images/team.png" hidden>
+                      <div class="background-circle" style="background-color:#257abc"></div>
+                    </div>
+                  </div>
+                  <div class="team__employee swiper-slide">
+                    <div class="team__slide__info">
+                      <p class="team__employee__name"><span class="name">Иван Иванов.</span><span class="position">Повар</span></p>
+                      <p class="team__employee__description">В нашем меню блюда европейской кухни, бизнес-ланчи, оригинальные десерты, выпечка, кофе и большой выбор выпечки</p>
+                    </div>
+                    <div class="team__employee__photo" style="background-image: url('assets/images/team.png')"><img src="assets/images/team.png" hidden>
+                      <div class="background-circle" style="background-color:#c9e7ff"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="team__slider__control">
+                  <div class="team__slider__prev js-prev-slide">
+                    <svg>
+                      <use xlink:href="assets/images/sprite.symbol.svg#arrow"></use>
+                    </svg>
+                  </div>
+                  <div class="team__slider__next js-next-slide">
+                    <svg>
+                      <use xlink:href="assets/images/sprite.symbol.svg#arrow"></use>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <p class="team__vertical">Наша команда</p>
+            </div>
+          </div>
+          <div class="page-main__reviews">
+            <div class="reviews">
+              <p class="reviews__vertical">Отзывы</p>
+              <h3 class="main__title reviews__title"><span class="main__info__title-background reviews__title-background">Отзывы</span><span class="main__info__title-text reviews__title-text">Отзывы</span></h3>
+              <p class="main__info__subtitle reviews__subtitle">Мнение наших гостей</p>
+              <div class="reviews__slider js-singl-swiper_horizontal">
+                <div class="swiper-wrapper">
+                  <div class="review swiper-slide page-main__reviews__review">
+                    <div class="review__photo swiper-slide page-main__reviews__review__photo" style="background-image: url('assets/images/reviewPhoto1.png')"><img src="assets/images/reviewPhoto1.png" hidden></div>
+                    <div class="review__info swiper-slide page-main__reviews__review__info">
+                      <p class="review__info__date swiper-slide page-main__reviews__review__info__date">25.08.19</p>
+                      <p class="review__info__name swiper-slide page-main__reviews__review__info__name">Ангелина Иванова</p>
+                      <p class="review__info__text swiper-slide page-main__reviews__review__info__text">В нашем меню блюда европейской кухни, бизнес-ланчи, оригинальные десерты, выпечка, кофе и большой выбор   В нашем меню блюда европейской кухни, бизнес-ланчи, оригинальные десерты, выпечка, кофе и большой выбор различных видов чая.</p>
+                    </div>
+                  </div>
+                  <div class="review swiper-slide page-main__reviews__review">
+                    <div class="review__photo swiper-slide page-main__reviews__review__photo" style="background-image: url('assets/images/reviewPhoto2.png')"><img src="assets/images/reviewPhoto2.png" hidden></div>
+                    <div class="review__info swiper-slide page-main__reviews__review__info">
+                      <p class="review__info__date swiper-slide page-main__reviews__review__info__date">25.08.19</p>
+                      <p class="review__info__name swiper-slide page-main__reviews__review__info__name">Ангелина Иванова</p>
+                      <p class="review__info__text swiper-slide page-main__reviews__review__info__text">В нашем меню блюда европейской кухни, бизнес-ланчи, оригинальные десерты, выпечка, кофе и большой выбор   В нашем меню блюда европейской кухни, бизнес-ланчи, оригинальные десерты, выпечка, кофе и большой выбор различных видов чая.</p>
+                    </div>
+                  </div>
+                  <div class="review swiper-slide page-main__reviews__review">
+                    <div class="review__photo swiper-slide page-main__reviews__review__photo" style="background-image: url('assets/images/reviewPhoto1.png')"><img src="assets/images/reviewPhoto1.png" hidden></div>
+                    <div class="review__info swiper-slide page-main__reviews__review__info">
+                      <p class="review__info__date swiper-slide page-main__reviews__review__info__date">25.08.19</p>
+                      <p class="review__info__name swiper-slide page-main__reviews__review__info__name">Ангелина Иванова</p>
+                      <p class="review__info__text swiper-slide page-main__reviews__review__info__text">В нашем меню блюда европейской кухни, бизнес-ланчи, оригинальные десерты, выпечка, кофе и большой выбор   В нашем меню блюда европейской кухни, бизнес-ланчи, оригинальные десерты, выпечка, кофе и большой выбор различных видов чая.</p>
+                    </div>
+                  </div>
+                  <div class="review swiper-slide page-main__reviews__review">
+                    <div class="review__photo swiper-slide page-main__reviews__review__photo" style="background-image: url('assets/images/reviewPhoto2.png')"><img src="assets/images/reviewPhoto2.png" hidden></div>
+                    <div class="review__info swiper-slide page-main__reviews__review__info">
+                      <p class="review__info__date swiper-slide page-main__reviews__review__info__date">25.08.19</p>
+                      <p class="review__info__name swiper-slide page-main__reviews__review__info__name">Ангелина Иванова</p>
+                      <p class="review__info__text swiper-slide page-main__reviews__review__info__text">В нашем меню блюда европейской кухни, бизнес-ланчи, оригинальные десерты, выпечка, кофе и большой выбор   В нашем меню блюда европейской кухни, бизнес-ланчи, оригинальные десерты, выпечка, кофе и большой выбор различных видов чая.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="reviews__slider__control">
+                  <div class="reviews__slider__prev js-prev-slide">
+                    <svg>
+                      <use xlink:href="assets/images/sprite.symbol.svg#arrow"></use>
+                    </svg>
+                  </div>
+                  <div class="reviews__slider__next js-next-slide">
+                    <svg>
+                      <use xlink:href="assets/images/sprite.symbol.svg#arrow"></use>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="page-main__gallery js-singl-swiper_horizontal">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide" style="background-image: url('assets/images/galleryIMG.png')"><img src="assets/images/galleryIMG.png" hidden></div>
+              <div class="swiper-slide" style="background-image: url('assets/images/galleryIMG.png')"><img src="assets/images/galleryIMG.png" hidden></div>
+              <div class="swiper-slide" style="background-image: url('assets/images/galleryIMG.png')"><img src="assets/images/galleryIMG.png" hidden></div>
+              <div class="swiper-slide" style="background-image: url('assets/images/galleryIMG.png')"><img src="assets/images/galleryIMG.png" hidden></div>
+            </div>
+            <div class="page-main__gallery__slider__control">
+              <div class="page-main__gallery__slider__prev js-prev-slide">
+                <svg>
+                  <use xlink:href="assets/images/sprite.symbol.svg#arrow"></use>
+                </svg>
+              </div>
+              <div class="page-main__gallery__slider__next js-next-slide">
+                <svg>
+                  <use xlink:href="assets/images/sprite.symbol.svg#arrow"></use>
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div class="page-main__contacts">
+            <div class="contacts">
+              <div class="contacts__image__wrapper">
+                <div class="contacts__image__wrapper-img" style="background-image: url('assets/images/contactsIMG.png')"><img src="assets/images/contactsIMG.png" hidden></div>
+              </div>
+              <div class="contacts__info">
+                <h3 class="main__title contacts__info__title"><span class="main__info__title-background contacts__info__title-background">Контакты</span><span class="main__info__title-text contacts__info__title-text">Контакты</span></h3>
+                <p class="main__info__subtitle contacts__info__subtitle">Мы предлагаем Вам провести у нас время всей семьей</p>
+                <div class="contacts__info__contacts">
+                  <div class="contacts__info__contact">
+                    <div class="contact">
+                      <h5 class="contact__title">Адрес:</h5>
+                      <p class="contact__info"><span>г.Черняховск, ул. Калининградская, 5, ТЦ &quot;Радуга&quot;</span>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="contacts__info__contact">
+                    <div class="contact">
+                      <h5 class="contact__title">Время работы:</h5>
+                      <p class="contact__info"><span>Пн-Вс</span><span>11:00 - 23:00</span>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="contacts__info__contact">
+                    <div class="contact">
+                      <h5 class="contact__title">Телефоны:</h5>
+                      <p class="contact__info"><span>+7 909 782 8450</span><span>+7 909 782 8450</span>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="social-links_mobile">
+                    <h5 class="social-links__title_mobile">Мы в соц. сетях</h5>
+                    <div class="social-links__wrapper_mobile"><a class="social-links__link_mobile" href="/">
+                        <svg>
+                          <use xlink:href="assets/images/sprite.symbol.svg#VK"></use>
+                        </svg></a><a class="social-links__link_mobile" href="/">
+                        <svg>
+                          <use xlink:href="assets/images/sprite.symbol.svg#instagram-logo"></use>
+                        </svg></a><a class="social-links__link_mobile" href="/">
+                        <svg>
+                          <use xlink:href="assets/images/sprite.symbol.svg#facebook"></use>
+                        </svg></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="contacts__info__footer">
+                  <div class="social-links">
+                    <h5 class="social-links__title">Мы в соц. сетях</h5>
+                    <div class="social-links__wrapper"><a class="social-links__link" href="/">
+                        <svg>
+                          <use xlink:href="assets/images/sprite.symbol.svg#VK"></use>
+                        </svg></a><a class="social-links__link" href="/">
+                        <svg>
+                          <use xlink:href="assets/images/sprite.symbol.svg#instagram-logo"></use>
+                        </svg></a><a class="social-links__link" href="/">
+                        <svg>
+                          <use xlink:href="assets/images/sprite.symbol.svg#facebook"></use>
+                        </svg></a>
+                    </div>
+                  </div>
+                  <button class="button reserve__btn page-main__reserve__btn"><span class="text">Забронировать</span></button>
+                </div>
+              </div>
+              <p class="contacts__vertical">Контакты</p>
+            </div>
+          </div>
+          <div class="page-main__callback">
+            <div class="callback js-callback page-main__callback">
+              <h2 class="callback__title page-main__callback__title">Мы можем перезвонить Вам сегодня</h2>
+              <form class="callback__form page-main__callback__form" novalidate>
+                <div class="callback__form__time page-main__callback__time">
+                  <div class="time">
+                    <label class="time__input-label"><span>сегодня</span>
+                      <svg>
+                        <use xlink:href="assets/images/sprite.symbol.svg#arrow"></use>
+                      </svg><span>точно в</span>
+                    </label>
+                    <div class="time__input__wrapper time__input__wrapper_first js-callback-input">
+                      <input class="time__input js-input" type="number" min="0" max="23" name="hour" value="10">
+                      <div class="time__input-inc js-input-inc">
+                        <svg>
+                          <use xlink:href="assets/images/sprite.symbol.svg#arrow"></use>
+                        </svg>
+                      </div>
+                      <div class="time__input-dec js-input-dec">
+                        <svg>
+                          <use xlink:href="assets/images/sprite.symbol.svg#arrow"></use>
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="time__input__wrapper js-callback-input">
+                      <input class="time__input js-input" type="number" min="0" max="59" name="minute" value="30">
+                      <div class="time__input-inc js-input-inc">
+                        <svg>
+                          <use xlink:href="assets/images/sprite.symbol.svg#arrow"></use>
+                        </svg>
+                      </div>
+                      <div class="time__input-dec js-input-dec">
+                        <svg>
+                          <use xlink:href="assets/images/sprite.symbol.svg#arrow"></use>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="phone">
+                    <input class="phone__input" type="phone" placeholder="Ваш телефон">
+                    <button class="button callback__submit" type="submit"><span>Отправить</span></button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </main>
+      <footer class="footer">
+        <div class="footer__wrapper">
+          <div class="footer__nav-block"><a class="footer__logo logo" href="/">
+              <div class="header__logo__icon logo__icon"></div>
+              <p class="header__logo__text logo__text">Leto</p></a>
+            <ul class="footer__nav">
+              <li class="footer__nav-link"><a href="menu.html">меню</a></li>
+              <li class="footer__nav-link"><a href="about.html">о нас</a></li>
+              <li class="footer__nav-link"><a href="events.html">мероприятия</a></li>
+              <li class="footer__nav-link"><a href="review.html">отзывы</a></li>
+              <li class="footer__nav-link"><a href="gallery.html">галерея</a></li>
+              <li class="footer__nav-link"><a href="contacts.html">контакты</a></li>
+            </ul>
+            <p class="footer__copyright">Copyright © 2019</p>
+          </div>
+          <div class="footer__social">
+            <div class="social-links">
+              <div class="social-links__link"><a href="/">
+                  <svg>
+                    <use xlink:href="assets/images/sprite.symbol.svg#VK"></use>
+                  </svg></a></div>
+              <div class="social-links__link"><a href="/">
+                  <svg>
+                    <use xlink:href="assets/images/sprite.symbol.svg#insta"></use>
+                  </svg></a></div>
+              <div class="social-links__link"><a href="/">
+                  <svg>
+                    <use xlink:href="assets/images/sprite.symbol.svg#facebook"></use>
+                  </svg></a></div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

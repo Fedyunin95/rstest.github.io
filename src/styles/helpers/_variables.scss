@@ -1,0 +1,21 @@
+// Breakpoints
+$desktop: 1200px;
+$laptop: 1024px;
+$tablet: 768px;
+$mobileL: 425px;
+$mobileM: 375px;
+$mobileS: 320px;
+
+$container-winger-padding-mobile: 10px;
+$container-winger-padding: 40px;
+$container-max-width-inner: 1160px;
+$container-max-width-outer: $container-max-width-inner + $container-winger-padding * 2;
+
+// Colors
+$color-basic: #000;
+$color-blue: #145e86;
+$color-font: #3b3b3b;
+$color-gray: #5e5e5e;
+
+//Fonts
+$font-main: 'CeraRoundPro';

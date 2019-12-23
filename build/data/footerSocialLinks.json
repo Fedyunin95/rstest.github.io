@@ -1,0 +1,29 @@
+{
+  "items": [
+    {
+      "id": "facebook",
+      "title": "Facebook",
+      "href": "#"
+    },
+    {
+      "id": "vkontakte",
+      "title": "Vkontakte",
+      "href": "#"
+    },
+    {
+      "id": "instagram",
+      "title": "Instagram",
+      "href": "#"
+    },
+    {
+      "id": "twitter",
+      "title": "Twitter",
+      "href": "#"
+    },
+    {
+      "id": "odnoklassniki",
+      "title": "Odnoklassniki",
+      "href": "#"
+    }
+  ]
+}

@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html class="no-js" lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="keywords" content="Meta keywords">
+    <meta name="description" content="Meta description">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <title>Leto
+    </title>
+    <link rel="stylesheet" href="assets/styles/main.min.css">
+    <script>
+      document.documentElement.className = document.documentElement.className.replace(new RegExp('(?:^|\\s)'+ 'no-js' + '(?:\\s|$)'), '');(function() {
+    "use strict";
+    // Optimization for Repeat Views
+    if( sessionStorage.fontsLoadedCriticalFoftPreloadFallback ) {
+        document.documentElement.className += " fonts-loaded-2";
+        return;
+    } else if( "fonts" in document ) {
+        document.fonts.load("1em BodoniSubset").then(function () {
+            document.documentElement.className += " fonts-loaded-1";
+            Promise.all([
+                document.fonts.load("400 1em Bodoni"),
+                document.fonts.load("500 1em Bodoni"),
+                // document.fonts.load("600 1em Bodoni"),
+                document.fonts.load("700 1em Bodoni"),
+                // document.fonts.load("900 1em Bodoni"),
+                document.fonts.load("italic 500 1em Bodoni")
+            ]).then(function () {
+                document.documentElement.className += " fonts-loaded-2";
+                // Optimization for Repeat Views
+                sessionStorage.fontsLoadedCriticalFoftPreloadFallback = true;
+            });
+        });
+    } else {
+        // use fallback
+        var ref = document.getElementsByTagName("script")[0];
+        var script = document.createElement("script");
+        script.src = "./scripts/critical-foft-preload-fallback-optional.js";
+        script.async = true;
+        ref.parentNode.insertBefore( script, ref );
+        /*
+         * technically you could trigger the web font load here too and race it with
+         * the polyfill load, this means creating an element with text content that
+         * uses the font and attaching it to the document
+         * <div style="font-family: Montserrat; font-weight: 400; font-style: italic">A</div>
+         */
+    }
+})();
+    </script>
+  </head>
+  <body>
+    <script src="assets/scripts/main.min.js"></script>
+    <div class="wrapper">
+      <header class="header js-header  header_black">
+        <div class="header__menu-btn js-header-open">
+          <button class="menu__btn_open"><span></span></button><span class="tirle">Меню</span>
+        </div>
+        <div class="header__menu js-header-menu">
+          <div class="header__menu__wrapper">
+            <button class="header__menu__btn_close js-header-close"><span class="text">Закрыть</span><span class="icon"><span class="first"></span><span class="last"></span></span></button>
+            <ul class="list">
+              <li class="list__item js-list-item"><a class="list__item__link" href="menu.html">Меню</a></li>
+              <li class="list__item js-list-item"><a class="list__item__link" href="about.html">О нас</a></li>
+              <li class="list__item js-list-item"><a class="list__item__link" href="events.html">Мероприятия</a></li>
+              <li class="list__item js-list-item"><a class="list__item__link" href="review.html">Отзывы</a></li>
+              <li class="list__item js-list-item"><a class="list__item__link" href="contacts.html">Контакты</a></li>
+            </ul><a class="button header__btn" href="/">Забронировать</a>
+            <div class="header__contacts">
+              <div class="contact"><span class="title">Адрес</span><span class="info">г.Черняховск, ул. Калининградская, 5, ТЦ &quot;Радуга&quot;</span>
+              </div>
+              <div class="contact"><span class="title">Время работы</span><span class="info">Пн-Вс</span><span class="info">11:00 - 23:00</span>
+              </div>
+              <div class="contact"><span class="title">Телефон</span><span class="info">+7 909 782 8450</span><span class="info">+7 909 782 8450</span>
+              </div>
+            </div>
+          </div>
+          <div class="header__menu__images">
+            <div class="image-slide js-list-item-bg" style="background-image: url(images/headerBG1.png)"><img src="images/headerBG1.png" hidden></div>
+            <div class="image-slide js-list-item-bg" style="background-image: url(images/headerBG2.png)"><img src="images/headerBG2.png" hidden></div>
+            <div class="image-slide js-list-item-bg" style="background-image: url(images/headerBG1.png)"><img src="images/headerBG1.png" hidden></div>
+            <div class="image-slide js-list-item-bg" style="background-image: url(images/headerBG2.png)"><img src="images/headerBG2.png" hidden></div>
+            <div class="image-slide js-list-item-bg" style="background-image: url(images/headerBG1.png)"><img src="images/headerBG1.png" hidden></div>
+          </div>
+        </div><a class="header__logo logo" href="main.html">
+          <div class="header__logo__icon logo__icon"></div>
+          <p class="header__logo__text logo__text">Leto</p></a>
+      </header>
+      <main class="main">
+        <div class="page-events js-page-events">
+          <div class="page-events__header">
+            <h2 class="page-events__header-title"><span class="page-events__header-title__text">Мероприятия</span><span class="page-events__header-title__background">Мероприятия</span></h2>
+            <p class="page-events__header-subtitle">Мы предлагаем Вам провести у нас время всей семьей</p>
+          </div>
+          <div class="page-events__calendar">
+            <div class="page-events__calendar-header">
+              <h3 class="calendar__year">2019</h3>
+              <div class="calendar__months js-months-swiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide calendar__months__item">
+                    <p class="title">Январь</p>
+                    <div class="border"></div>
+                  </div>
+                  <div class="swiper-slide calendar__months__item">
+                    <p class="title">Февраль</p>
+                    <div class="border"></div>
+                  </div>
+                  <div class="swiper-slide calendar__months__item">
+                    <p class="title">Март</p>
+                    <div class="border"></div>
+                  </div>
+                  <div class="swiper-slide calendar__months__item">
+                    <p class="title">Апрель</p>
+                    <div class="border"></div>
+                  </div>
+                  <div class="swiper-slide calendar__months__item">
+                    <p class="title">Май</p>
+                    <div class="border"></div>
+                  </div>
+                  <div class="swiper-slide calendar__months__item">
+                    <p class="title">Июнь</p>
+                    <div class="border"></div>
+                  </div>
+                  <div class="swiper-slide calendar__months__item">
+                    <p class="title">Июль</p>
+                    <div class="border"></div>
+                  </div>
+                  <div class="swiper-slide calendar__months__item">
+                    <p class="title">Август</p>
+                    <div class="border"></div>
+                  </div>
+                  <div class="swiper-slide calendar__months__item">
+                    <p class="title">Сентябрь</p>
+                    <div class="border"></div>
+                  </div>
+                  <div class="swiper-slide calendar__months__item">
+                    <p class="title">Октябрь</p>
+                    <div class="border"></div>
+                  </div>
+                  <div class="swiper-slide calendar__months__item">
+                    <p class="title">Ноябрь</p>
+                    <div class="border"></div>
+                  </div>
+                  <div class="swiper-slide calendar__months__item">
+                    <p class="title">Декабрь</p>
+                    <div class="border"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-navigation">
+                <div class="swiper-button-next js-next-month">
+                  <svg>
+                    <use xlink:href="assets/images/sprite.symbol.svg#arrow_long"></use>
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div class="page-events__calendar-body">
+              <table class="months">
+                <tbody>
+                  <tr>
+                    <td class="empty"><span></span></td>
+                    <td class="empty"><span></span></td>
+                    <td class="empty"><span></span></td>
+                    <td class="holiday"><span>1</span></td>
+                    <td class="holiday"><span>2</span></td>
+                    <td class="holiday active"><span>3</span></td>
+                    <td class="disabled"><span>4</span></td>
+                  </tr>
+                  <tr>
+                    <td class="disabled"><span>5</span></td>
+                    <td class="holiday"><span>6</span></td>
+                    <td class="disabled"><span>7</span></td>
+                    <td class="disabled"><span>8</span></td>
+                    <td class="holiday"><span>9</span></td>
+                    <td class="holiday"><span>10</span></td>
+                    <td class="disabled"><span>11</span></td>
+                  </tr>
+                  <tr>
+                    <td class="disabled"><span>12</span></td>
+                    <td class="holiday"><span>13</span></td>
+                    <td><span>14</span></td>
+                    <td class="holiday"><span>15</span></td>
+                    <td class="holiday"><span>16</span></td>
+                    <td><span>17</span></td>
+                    <td class="disabled"><span>18</span></td>
+                  </tr>
+                  <tr>
+                    <td class="disabled"><span>19</span></td>
+                    <td><span>20</span></td>
+                    <td class="disabled"><span>21</span></td>
+                    <td><span>22</span></td>
+                    <td><span>23</span></td>
+                    <td><span>24</span></td>
+                    <td class="disabled"><span>25</span></td>
+                  </tr>
+                  <tr>
+                    <td class="disabled"><span>26</span></td>
+                    <td><span>27</span></td>
+                    <td><span>28</span></td>
+                    <td><span>29</span></td>
+                    <td class="disabled"><span>30</span></td>
+                    <td><span>31</span></td>
+                    <td class="empty"><span></span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="page-events__calendar_vertical">Мероприятия</p>
+          </div>
+          <div class="page-events__body">
+            <p class="page-events__body-title">СОБЫТИЯ НА ТЕКУЩИЮ НЕДЕЛЮ:</p>
+            <div class="page-events__body-cards">
+              <div class="card  ">
+                <div class="card__image" style="background-image: url('assets/images/eventsIMG1.png')"><img src="assets/images/eventsIMG1.png" hidden></div>
+                <div class="card__body">
+                  <div class="card__body__date">14 Август 20:00</div>
+                  <div class="card__body__title">Игра головой</div>
+                  <div class="card__body__description">В нашем меню блюда европейской кухни, бизнес-ланчи, оригинальные</div>
+                  <div class="card__body__btn js-reserve"><span>забронировать</span></div>
+                </div>
+              </div>
+              <div class="card  card_sold-out">
+                <div class="card__image" style="background-image: url('assets/images/eventsIMG1.png')"><img src="assets/images/eventsIMG1.png" hidden></div>
+                <div class="card__body">
+                  <div class="card__body__date">14 Август 20:00</div>
+                  <div class="card__body__title">Игра головой</div>
+                  <div class="card__body__description">В нашем меню блюда европейской кухни, бизнес-ланчи, оригинальные</div>
+                  <div class="card__body__btn js-reserve"><span>забронировать</span></div>
+                </div>
+              </div>
+              <div class="card  ">
+                <div class="card__image" style="background-image: url('assets/images/eventsIMG1.png')"><img src="assets/images/eventsIMG1.png" hidden></div>
+                <div class="card__body">
+                  <div class="card__body__date">14 Август 20:00</div>
+                  <div class="card__body__title">Игра головой</div>
+                  <div class="card__body__description">В нашем меню блюда европейской кухни, бизнес-ланчи, оригинальные</div>
+                  <div class="card__body__btn js-reserve"><span>забронировать</span></div>
+                </div>
+              </div>
+              <div class="card  ">
+                <div class="card__image" style="background-image: url('assets/images/eventsIMG1.png')"><img src="assets/images/eventsIMG1.png" hidden></div>
+                <div class="card__body">
+                  <div class="card__body__date">14 Август 20:00</div>
+                  <div class="card__body__title">Игра головой</div>
+                  <div class="card__body__description">В нашем меню блюда европейской кухни, бизнес-ланчи, оригинальные</div>
+                  <div class="card__body__btn js-reserve"><span>забронировать</span></div>
+                </div>
+              </div>
+              <div class="card  card_sold-out">
+                <div class="card__image" style="background-image: url('assets/images/eventsIMG1.png')"><img src="assets/images/eventsIMG1.png" hidden></div>
+                <div class="card__body">
+                  <div class="card__body__date">14 Август 20:00</div>
+                  <div class="card__body__title">Игра головой</div>
+                  <div class="card__body__description">В нашем меню блюда европейской кухни, бизнес-ланчи, оригинальные</div>
+                  <div class="card__body__btn js-reserve"><span>забронировать</span></div>
+                </div>
+              </div>
+              <div class="card  ">
+                <div class="card__image" style="background-image: url('assets/images/eventsIMG1.png')"><img src="assets/images/eventsIMG1.png" hidden></div>
+                <div class="card__body">
+                  <div class="card__body__date">14 Август 20:00</div>
+                  <div class="card__body__title">Игра головой</div>
+                  <div class="card__body__description">В нашем меню блюда европейской кухни, бизнес-ланчи, оригинальные</div>
+                  <div class="card__body__btn js-reserve"><span>забронировать</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="page-events__callback">
+            <div class="callback js-callback page-main__callback">
+              <h2 class="callback__title page-main__callback__title">Мы можем перезвонить Вам сегодня</h2>
+              <form class="callback__form page-main__callback__form" novalidate>
+                <div class="callback__form__time page-main__callback__time">
+                  <div class="time">
+                    <label class="time__input-label"><span>сегодня</span>
+                      <svg>
+                        <use xlink:href="assets/images/sprite.symbol.svg#arrow"></use>
+                      </svg><span>точно в</span>
+                    </label>
+                    <div class="time__input__wrapper time__input__wrapper_first js-callback-input">
+                      <input class="time__input js-input" type="number" min="0" max="23" name="hour" value="10">
+                      <div class="time__input-inc js-input-inc">
+                        <svg>
+                          <use xlink:href="assets/images/sprite.symbol.svg#arrow"></use>
+                        </svg>
+                      </div>
+                      <div class="time__input-dec js-input-dec">
+                        <svg>
+                          <use xlink:href="assets/images/sprite.symbol.svg#arrow"></use>
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="time__input__wrapper js-callback-input">
+                      <input class="time__input js-input" type="number" min="0" max="59" name="minute" value="30">
+                      <div class="time__input-inc js-input-inc">
+                        <svg>
+                          <use xlink:href="assets/images/sprite.symbol.svg#arrow"></use>
+                        </svg>
+                      </div>
+                      <div class="time__input-dec js-input-dec">
+                        <svg>
+                          <use xlink:href="assets/images/sprite.symbol.svg#arrow"></use>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="phone">
+                    <input class="phone__input" type="phone" placeholder="Ваш телефон">
+                    <button class="button callback__submit" type="submit"><span>Отправить</span></button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="popup js-popup  page-events__popup">
+            <div class="popup__wrapper">
+              <div class="popup__close js-close-popup"></div>
+              <div class="popup__image js-image" style="background-image: url('assets/images/eventsIMG1.png')"><img src="assets/images/eventsIMG1.png" hidden></div>
+              <div class="popup__body">
+                <p class="popup__date js-date">14 Август 20:00</p>
+                <h5 class="popup__title js-title" data-event-id="">Игра головой</h5>
+                <div class="popup__description js-description">
+                  <p class="popup__description__paragraph">Tаким образом постоянное информационно-пропагандистское обеспечение нашей деятельности в значительной степени обуславливает создание форм развития.</p>
+                  <p class="popup__description__paragraph">Задача организации, в особенности же рамки и место обучения кадров способствует подготовки и реализации систем массового участия. Не следует, однако забывать, что начало повседневной работы по формированию позиции влечет за собой процесс внедрения и модернизации системы обучения кадров, соответствует насущным</p>
+                </div>
+                <div class="popup__buttons">
+                  <button class="popup__btn popup__btn_colored"><span>Забронировать</span></button>
+                  <button class="js-close-popup popup__btn popup__btn_bordered"><span>Скрыть</span></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <footer class="footer">
+        <div class="footer__wrapper">
+          <div class="footer__nav-block"><a class="footer__logo logo" href="/">
+              <div class="header__logo__icon logo__icon"></div>
+              <p class="header__logo__text logo__text">Leto</p></a>
+            <ul class="footer__nav">
+              <li class="footer__nav-link"><a href="menu.html">меню</a></li>
+              <li class="footer__nav-link"><a href="about.html">о нас</a></li>
+              <li class="footer__nav-link"><a href="events.html">мероприятия</a></li>
+              <li class="footer__nav-link"><a href="review.html">отзывы</a></li>
+              <li class="footer__nav-link"><a href="gallery.html">галерея</a></li>
+              <li class="footer__nav-link"><a href="contacts.html">контакты</a></li>
+            </ul>
+            <p class="footer__copyright">Copyright © 2019</p>
+          </div>
+          <div class="footer__social">
+            <div class="social-links">
+              <div class="social-links__link"><a href="/">
+                  <svg>
+                    <use xlink:href="assets/images/sprite.symbol.svg#VK"></use>
+                  </svg></a></div>
+              <div class="social-links__link"><a href="/">
+                  <svg>
+                    <use xlink:href="assets/images/sprite.symbol.svg#insta"></use>
+                  </svg></a></div>
+              <div class="social-links__link"><a href="/">
+                  <svg>
+                    <use xlink:href="assets/images/sprite.symbol.svg#facebook"></use>
+                  </svg></a></div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

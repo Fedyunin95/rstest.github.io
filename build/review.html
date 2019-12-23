@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html class="no-js" lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="keywords" content="Meta keywords">
+    <meta name="description" content="Meta description">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <title>Leto
+    </title>
+    <link rel="stylesheet" href="assets/styles/main.min.css">
+    <script>
+      document.documentElement.className = document.documentElement.className.replace(new RegExp('(?:^|\\s)'+ 'no-js' + '(?:\\s|$)'), '');(function() {
+    "use strict";
+    // Optimization for Repeat Views
+    if( sessionStorage.fontsLoadedCriticalFoftPreloadFallback ) {
+        document.documentElement.className += " fonts-loaded-2";
+        return;
+    } else if( "fonts" in document ) {
+        document.fonts.load("1em BodoniSubset").then(function () {
+            document.documentElement.className += " fonts-loaded-1";
+            Promise.all([
+                document.fonts.load("400 1em Bodoni"),
+                document.fonts.load("500 1em Bodoni"),
+                // document.fonts.load("600 1em Bodoni"),
+                document.fonts.load("700 1em Bodoni"),
+                // document.fonts.load("900 1em Bodoni"),
+                document.fonts.load("italic 500 1em Bodoni")
+            ]).then(function () {
+                document.documentElement.className += " fonts-loaded-2";
+                // Optimization for Repeat Views
+                sessionStorage.fontsLoadedCriticalFoftPreloadFallback = true;
+            });
+        });
+    } else {
+        // use fallback
+        var ref = document.getElementsByTagName("script")[0];
+        var script = document.createElement("script");
+        script.src = "./scripts/critical-foft-preload-fallback-optional.js";
+        script.async = true;
+        ref.parentNode.insertBefore( script, ref );
+        /*
+         * technically you could trigger the web font load here too and race it with
+         * the polyfill load, this means creating an element with text content that
+         * uses the font and attaching it to the document
+         * <div style="font-family: Montserrat; font-weight: 400; font-style: italic">A</div>
+         */
+    }
+})();
+    </script>
+  </head>
+  <body>
+    <script src="assets/scripts/main.min.js"></script>
+    <div class="wrapper">
+      <header class="header js-header  header_black">
+        <div class="header__menu-btn js-header-open">
+          <button class="menu__btn_open"><span></span></button><span class="tirle">Меню</span>
+        </div>
+        <div class="header__menu js-header-menu">
+          <div class="header__menu__wrapper">
+            <button class="header__menu__btn_close js-header-close"><span class="text">Закрыть</span><span class="icon"><span class="first"></span><span class="last"></span></span></button>
+            <ul class="list">
+              <li class="list__item js-list-item"><a class="list__item__link" href="menu.html">Меню</a></li>
+              <li class="list__item js-list-item"><a class="list__item__link" href="about.html">О нас</a></li>
+              <li class="list__item js-list-item"><a class="list__item__link" href="events.html">Мероприятия</a></li>
+              <li class="list__item js-list-item"><a class="list__item__link" href="review.html">Отзывы</a></li>
+              <li class="list__item js-list-item"><a class="list__item__link" href="contacts.html">Контакты</a></li>
+            </ul><a class="button header__btn" href="/">Забронировать</a>
+            <div class="header__contacts">
+              <div class="contact"><span class="title">Адрес</span><span class="info">г.Черняховск, ул. Калининградская, 5, ТЦ &quot;Радуга&quot;</span>
+              </div>
+              <div class="contact"><span class="title">Время работы</span><span class="info">Пн-Вс</span><span class="info">11:00 - 23:00</span>
+              </div>
+              <div class="contact"><span class="title">Телефон</span><span class="info">+7 909 782 8450</span><span class="info">+7 909 782 8450</span>
+              </div>
+            </div>
+          </div>
+          <div class="header__menu__images">
+            <div class="image-slide js-list-item-bg" style="background-image: url(images/headerBG1.png)"><img src="images/headerBG1.png" hidden></div>
+            <div class="image-slide js-list-item-bg" style="background-image: url(images/headerBG2.png)"><img src="images/headerBG2.png" hidden></div>
+            <div class="image-slide js-list-item-bg" style="background-image: url(images/headerBG1.png)"><img src="images/headerBG1.png" hidden></div>
+            <div class="image-slide js-list-item-bg" style="background-image: url(images/headerBG2.png)"><img src="images/headerBG2.png" hidden></div>
+            <div class="image-slide js-list-item-bg" style="background-image: url(images/headerBG1.png)"><img src="images/headerBG1.png" hidden></div>
+          </div>
+        </div><a class="header__logo logo" href="main.html">
+          <div class="header__logo__icon logo__icon"></div>
+          <p class="header__logo__text logo__text">Leto</p></a>
+      </header>
+      <main class="main">
+        <div class="page-review js-page-review">
+          <div class="quest-review">
+            <div class="quest-review__header">
+              <div class="quest-review__header__half">
+                <h3 class="quest-review__title"><span class="quest-review__title-background">Отзывы</span><span class="quest-review__title-text">Отзывы</span></h3>
+                <p class="quest-review__subtitle"><span>Вы можете  оставить отзыв о нашем кафе, оставьте свои контакты для связи с Вами</span></p>
+                <form class="quest-review__form js-quest-review">
+                  <div class="quest-review__form__input">
+                    <input class="quest-review__form__input-field" name="name" placeholder="Ваше имя" required>
+                  </div>
+                  <div class="quest-review__form__input">
+                    <input class="quest-review__form__input-field" name="phone" placeholder="Ваш телефон">
+                  </div>
+                  <div class="quest-review__form__input">
+                    <input class="quest-review__form__input-field" name="email" placeholder="Ваш E-mail" required>
+                  </div>
+                  <div class="quest-review__form__input quest-review__form__input_textarea">
+                    <p class="quest-review__form__input_textarea-title">Ваш отзыв</p>
+                    <textarea class="quest-review__form__input-field" name="review" required></textarea>
+                  </div>
+                  <button class="quest-review__form__btn" type="submit"><span>Отправить</span></button>
+                </form>
+              </div>
+              <div class="quest-review__header__half">
+                <div class="quest-review__header__image" style="background-image: url('assets/images/callbackImage.png')"><img src="assets/images/callbackImage.png" hidden></div>
+              </div>
+            </div>
+            <div class="quest-review__body">
+              <h2 class="quest-review__body__title">МНЕНИЕ НАШИХ ГОСТЕЙ</h2>
+              <div class="review page-review__reviews__review">
+                <div class="review__photo page-review__reviews__review__photo" style="background-image: url('assets/images/reviewPhoto1.png')"><img src="assets/images/reviewPhoto1.png" hidden></div>
+                <div class="review__info page-review__reviews__review__info">
+                  <p class="review__info__date page-review__reviews__review__info__date">25.08.19</p>
+                  <p class="review__info__name page-review__reviews__review__info__name">Ангелина Иванова</p>
+                  <p class="review__info__text page-review__reviews__review__info__text">В нашем меню блюда европейской кухни, бизнес-ланчи, оригинальные десерты, выпечка, кофе и большой выбоВ нашем меню блюда европейской кухни, бизнес-ланчи, оригинальные десерты, выпечка, кофе и большой выбор различных видов чая.</p>
+                </div>
+              </div>
+              <div class="review page-review__reviews__review">
+                <div class="review__photo page-review__reviews__review__photo" style="background-image: url('assets/images/reviewPhoto2.png')"><img src="assets/images/reviewPhoto2.png" hidden></div>
+                <div class="review__info page-review__reviews__review__info">
+                  <p class="review__info__date page-review__reviews__review__info__date">25.08.19</p>
+                  <p class="review__info__name page-review__reviews__review__info__name">Ангелина Иванова</p>
+                  <p class="review__info__text page-review__reviews__review__info__text">В нашем меню блюда европейской кухни, бизнес-ланчи, оригинальные десерты, выпечка, кофе и большой выбоВ нашем меню блюда европейской кухни, бизнес-ланчи, оригинальные десерты, выпечка, кофе и большой выбор различных видов чая.</p>
+                </div>
+              </div>
+              <div class="review page-review__reviews__review">
+                <div class="review__photo page-review__reviews__review__photo" style="background-image: url('assets/images/reviewPhoto1.png')"><img src="assets/images/reviewPhoto1.png" hidden></div>
+                <div class="review__info page-review__reviews__review__info">
+                  <p class="review__info__date page-review__reviews__review__info__date">25.08.19</p>
+                  <p class="review__info__name page-review__reviews__review__info__name">Ангелина Иванова</p>
+                  <p class="review__info__text page-review__reviews__review__info__text">В нашем меню блюда европейской кухни, бизнес-ланчи, оригинальные десерты, выпечка, кофе и большой выбоВ нашем меню блюда европейской кухни, бизнес-ланчи, оригинальные десерты, выпечка, кофе и большой выбор различных видов чая.</p>
+                </div>
+              </div>
+              <div class="review page-review__reviews__review">
+                <div class="review__photo page-review__reviews__review__photo" style="background-image: url('assets/images/reviewPhoto2.png')"><img src="assets/images/reviewPhoto2.png" hidden></div>
+                <div class="review__info page-review__reviews__review__info">
+                  <p class="review__info__date page-review__reviews__review__info__date">25.08.19</p>
+                  <p class="review__info__name page-review__reviews__review__info__name">Ангелина Иванова</p>
+                  <p class="review__info__text page-review__reviews__review__info__text">В нашем меню блюда европейской кухни, бизнес-ланчи, оригинальные десерты, выпечка, кофе и большой выбоВ нашем меню блюда европейской кухни, бизнес-ланчи, оригинальные десерты, выпечка, кофе и большой выбор различных видов чая.</p>
+                </div>
+              </div>
+            </div>
+            <div class="page-quest-review__callback">
+              <div class="callback js-callback page-review__callback">
+                <h2 class="callback__title page-review__callback__title">Мы можем перезвонить Вам сегодня</h2>
+                <form class="callback__form page-review__callback__form" novalidate>
+                  <div class="callback__form__time page-review__callback__time">
+                    <div class="time">
+                      <label class="time__input-label"><span>сегодня</span>
+                        <svg>
+                          <use xlink:href="assets/images/sprite.symbol.svg#arrow"></use>
+                        </svg><span>точно в</span>
+                      </label>
+                      <div class="time__input__wrapper time__input__wrapper_first js-callback-input">
+                        <input class="time__input js-input" type="number" min="0" max="23" name="hour" value="10">
+                        <div class="time__input-inc js-input-inc">
+                          <svg>
+                            <use xlink:href="assets/images/sprite.symbol.svg#arrow"></use>
+                          </svg>
+                        </div>
+                        <div class="time__input-dec js-input-dec">
+                          <svg>
+                            <use xlink:href="assets/images/sprite.symbol.svg#arrow"></use>
+                          </svg>
+                        </div>
+                      </div>
+                      <div class="time__input__wrapper js-callback-input">
+                        <input class="time__input js-input" type="number" min="0" max="59" name="minute" value="30">
+                        <div class="time__input-inc js-input-inc">
+                          <svg>
+                            <use xlink:href="assets/images/sprite.symbol.svg#arrow"></use>
+                          </svg>
+                        </div>
+                        <div class="time__input-dec js-input-dec">
+                          <svg>
+                            <use xlink:href="assets/images/sprite.symbol.svg#arrow"></use>
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="phone">
+                      <input class="phone__input" type="phone" placeholder="Ваш телефон">
+                      <button class="button callback__submit" type="submit"><span>Отправить</span></button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="rollup js-rollup">
+            <div class="rollup__icon">
+              <svg>
+                <use xlink:href="assets/images/sprite.symbol.svg#arrow"></use>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </main>
+      <footer class="footer">
+        <div class="footer__wrapper">
+          <div class="footer__nav-block"><a class="footer__logo logo" href="/">
+              <div class="header__logo__icon logo__icon"></div>
+              <p class="header__logo__text logo__text">Leto</p></a>
+            <ul class="footer__nav">
+              <li class="footer__nav-link"><a href="menu.html">меню</a></li>
+              <li class="footer__nav-link"><a href="about.html">о нас</a></li>
+              <li class="footer__nav-link"><a href="events.html">мероприятия</a></li>
+              <li class="footer__nav-link"><a href="review.html">отзывы</a></li>
+              <li class="footer__nav-link"><a href="gallery.html">галерея</a></li>
+              <li class="footer__nav-link"><a href="contacts.html">контакты</a></li>
+            </ul>
+            <p class="footer__copyright">Copyright © 2019</p>
+          </div>
+          <div class="footer__social">
+            <div class="social-links">
+              <div class="social-links__link"><a href="/">
+                  <svg>
+                    <use xlink:href="assets/images/sprite.symbol.svg#VK"></use>
+                  </svg></a></div>
+              <div class="social-links__link"><a href="/">
+                  <svg>
+                    <use xlink:href="assets/images/sprite.symbol.svg#insta"></use>
+                  </svg></a></div>
+              <div class="social-links__link"><a href="/">
+                  <svg>
+                    <use xlink:href="assets/images/sprite.symbol.svg#facebook"></use>
+                  </svg></a></div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

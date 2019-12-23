@@ -1,0 +1,117 @@
+// /*
+//  *  BASE STYLES
+//  */
+
+
+@import "helpers/_mixins";
+@import "helpers/_variables";
+
+
+/*==========================================================================
+    Custom fonts
+==========================================================================*/
+
+@font-face {
+  font-family: 'CeraRoundPro';
+  src: url('../fonts/CeraRoundPro-Regular.otf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'CeraRoundPro';
+  src: url('../fonts/CeraRoundPro-Bold.otf');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'CeraRoundPro';
+  src: url('../fonts/CeraRoundPro-Black.otf');
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('../fonts/CeraRoundPro-Medium.otf');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('../fonts/CeraRoundPro-Light.otf');
+  font-weight: 300;
+  font-style: normal;
+}
+
+/*==========================================================================
+    HTML, BODY styles
+==========================================================================*/
+
+html {
+  height: 100%;
+}
+
+body {
+  background-color: #fff;
+  color: $color-basic;
+  font-family: $font-main;
+  height: 100%;
+  line-height: 1.2;
+  min-width: 320px;
+  width: 100%;
+  -webkit-overflow-scrolling: touch;
+}
+
+* {
+  font-family: $font-main;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  min-width: 320px;
+  position: relative;
+}
+
+.header,
+.footer {
+  flex: 0 0 auto;
+}
+
+.main {
+  flex: 1 0 auto;
+}
+
+.title {
+  color: $color-basic;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: normal;
+  letter-spacing: -0.03em;
+  line-height: normal;
+}
+
+.visually-hidden {
+  @include visually-hidden-content;
+}
+
+a:focus,
+button:focus,
+div:focus,
+input:focus,
+textarea:focus {
+  outline: none;
+}
+
+input, input:hover, input:focus {
+  @include hide-input-spinners;
+}
+
+svg {
+  width: 100%;
+  height: 100%;
+}

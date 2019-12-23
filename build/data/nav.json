@@ -1,0 +1,34 @@
+{
+  "items": [
+    {
+      "title": "Новый год",
+      "href": "#",
+      "theme": "highlighted"
+    },
+    {
+      "title": "Подобрать подарок",
+      "href": "#",
+      "theme": "highlighted"
+    },
+    {
+      "title": "Сувениры",
+      "href": "#"
+    },
+    {
+      "title": "Цветы",
+      "href": "#"
+    },
+    {
+      "title": "VIP подарки",
+      "href": "#"
+    },
+    {
+      "title": "Детям",
+      "href": "#"
+    },
+    {
+      "title": "B2B",
+      "href": "#"
+    }
+  ]
+}

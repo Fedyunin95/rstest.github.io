@@ -1,0 +1,80 @@
+extends /containers/layout
+
+
+block variables
+
+
+block content
+
+    style.
+        .project-pages {
+            box-sizing: border-box;
+            margin: 0 auto;
+            max-width: 1480px;
+            padding: 60px 140px;
+        }
+        .project-pages__title {
+            margin-bottom: 40px;
+        }
+        .project-pages__items {
+            color: #000;
+            counter-reset: list-number;
+        }
+        .project-pages__item {
+            counter-increment: list-number;
+            font-size: 0;
+            letter-spacing: 0;
+            padding-left: 25px;
+            word-spacing: 0;
+        }
+        .project-pages__item:before {
+            content: counter(list-number) ".";
+            display: inline-block;
+            font-size: 15px;
+            margin-left: -25px;
+            margin-right: 10px;
+            width: 15px;
+        }
+        .project-pages__item + .project-pages__item {
+            margin-top: 15px;
+        }
+        .project-pages__link {
+            color: inherit;
+            font-size: 20px;
+            letter-spacing: .03em;
+            text-decoration: none;
+            -webkit-transition: all .3s ease;
+            -moz-transition: all .3s ease;
+            -o-transition: all .3s ease;
+            transition: all .3s ease;
+        }
+        .project-pages__link:hover {
+            -moz-opacity: .65;
+            opacity: .65;
+        }
+
+
+    div.project-pages
+
+        h1.title.project-pages__title
+            | Список страниц
+
+        ul.project-pages__items
+
+            each pageParameters in pagesList
+
+                li.project-pages__item
+
+                    - var link = pageParameters.link;
+
+                    if environment == "production"
+                        - link = "build/" + link;
+
+                    a.project-pages__link(
+                        href= getFormattedLink(link)
+                    )
+                        if pageParameters.title
+                            | #{pageParameters.title} [#{pageParameters.name}]
+
+                        else
+                            | #{pageParameters.name}

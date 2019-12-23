@@ -1,0 +1,9 @@
+/.htaccess
+/.DS_Store
+/**/.DS_Store
+/**/._.DS_Store
+.idea
+/node_modules
+/bower_components
+/src/components/_
+/html-validation-results.json

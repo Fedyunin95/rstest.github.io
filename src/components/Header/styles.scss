@@ -1,0 +1,66 @@
+.header {
+  width: 100%;
+  position: sticky;
+  left: 0;
+  top: 0;
+  padding: 25px;
+  box-sizing: border-box;
+  background-color: #000;
+  color: #fff !important;
+
+  &__wrapper {
+    width: 100%;
+    height: 100%;
+    max-width: 1200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    width: 200px;
+    height: 40px;
+
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__menu {
+    font-size: 16px;
+    font-family: $font-main;
+    color: #fdfffc;
+    font-weight: bold;
+    line-height: 1.2;
+    text-align: left;
+
+    &__link {
+      color: inherit;
+      text-decoration: none;
+
+      &:not(:last-child) {
+        margin-right: 50px;
+      }
+    }
+
+  }
+
+  &__btn {
+    border: 2px solid rgba(84, 137, 195, 0.4);
+    width: 196px;
+    height: 56px;
+    background-color: transparent;
+    border-radius: 50px;
+    color: rgb(253, 255, 252);
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 1.2;
+    cursor: pointer;
+
+    &:hover, &:focus, &:active {
+      border-color: rgba(84, 137, 195, 1);;
+    }
+  }
+
+}

@@ -78,7 +78,7 @@
     "choices.js": "^3.0.4",
     "inputmask": "^4.0.8",
     "intersection-observer": "^0.5.1",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "multer": "^1.4.1",
     "nouislider": "^13.1.4",
     "reset-css": "^4.0.1",

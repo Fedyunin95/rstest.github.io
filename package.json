@@ -64,7 +64,7 @@
     "imagemin-webp": "^5.0.0",
     "merge-stream": "^1.0.1",
     "prettier": "^1.16.4",
-    "pug": "^2.0.3",
+    "pug": "^3.0.1",
     "uglifyjs-webpack-plugin": "^2.1.2",
     "vinyl-ftp": "^0.6.1",
     "w3cjs": "^0.4.0",

@@ -84,7 +84,7 @@
     "reset-css": "^4.0.1",
     "smoothscroll-polyfill": "^0.4.3",
     "svg4everybody": "^2.1.9",
-    "swiper": "^4.5.0",
+    "swiper": "^6.5.1",
     "vanilla-lazyload": "^11.0.5",
     "whatwg-fetch": "^3.0.0"
   }
